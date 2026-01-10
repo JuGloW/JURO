@@ -57,7 +57,7 @@ The source layer follows these principles:
 
 ---
 
-## Core Structure
+## Structure
 > Struktur Inti
 
 Each directory below represents an independent source module.
@@ -79,7 +79,7 @@ memory handling, execution models, and shared utilities.
 
 ---
 
-### Design Engine
+### Design 
 - [`design/`](./design)  
 
 Source code for visual and interface systems, including:
@@ -96,7 +96,7 @@ Source code for visual and interface systems, including:
 
 ---
 
-### Coding & Editor Engine
+### Coding & Editor
 - [`editor/`](./editor)  
 
 Source for code editing systems, including:
@@ -113,7 +113,7 @@ Source for code editing systems, including:
 
 ---
 
-### ChatGlow Engine
+### ChatGlow
 - [`chatglow/`](./chatglow)  
 
 Conversational and interaction engine, including:
@@ -128,7 +128,7 @@ Conversational and interaction engine, including:
 
 ---
 
-### Junhai Shell Core
+### Junhai Shell 
 - [`junhai/`](./junhai)  
 
 Shell and execution engine source, including:
@@ -199,13 +199,6 @@ The source layer is designed for continuous growth.
 
 Future modules may include:
 > Modul di masa depan dapat mencakup:
-
-- `ai/`  
-- `network/`  
-- `storage/`  
-- `media/`  
-- `compiler/`  
-- `runtime/`  
 
 As long as modules remain self-contained and well-defined,
 they can integrate seamlessly into the JURO ecosystem.
