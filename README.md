@@ -1,4 +1,3 @@
-
 # JURO – JuGloW Unified Repository Organization
 
 ## Overview
@@ -11,9 +10,9 @@ JuGloW is a modular ecosystem designed for building, distributing, and integrati
 JURO acts as the entry point for both developers and automated systems.
 
 ## Repository Structure
-- **apps/** → Distributable applications and packages  
-- **source/** → Source code and reusable modules  
-- **docs/** → Documentation and ecosystem references  
+- **[apps/](apps/)** → Distributable applications and packages  
+- **[source/](source/)** → Source code and reusable modules  
+- **[docs/](docs/)** → Documentation and ecosystem references  
 
 ## Access Model
 JURO is designed to be accessible by:
