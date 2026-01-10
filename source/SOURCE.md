@@ -1,4 +1,4 @@
-# JURO Source
+# JuGloW Source
 **JuGloW Unified Repository Organization – Source Layer**
 
 ## Overview
