@@ -1,70 +1,133 @@
-# JURO – JuGloW Unified Repository Organization
-> JURO – Organisasi Repositori Terpadu JuGloW
+
+# JuGloW Apps
+> Aplikasi dalam Ekosistem JuGloW
 
 ## Overview
 > Ringkasan
 
-JURO is the unified repository hub for the JuGloW ecosystem.
-> JURO adalah pusat repositori terpadu untuk ekosistem JuGloW.
+This directory contains all distributable applications within the JuGloW ecosystem.  
+Each application represents a modular, reusable, and evolvable product built on top of JuGloW.
 
-It serves as the central distribution and source organization for applications, libraries, and documentation within JuGloW.
-> Ia berfungsi sebagai pusat distribusi dan organisasi sumber untuk aplikasi, perpustakaan, dan dokumentasi di dalam JuGloW.
+> Direktori ini berisi seluruh aplikasi yang dapat didistribusikan dalam ekosistem JuGloW.  
+> Setiap aplikasi merupakan produk modular yang dapat digunakan ulang dan dikembangkan secara berkelanjutan di atas JuGloW.
 
-## JuGloW Ecosystem
-> Ekosistem JuGloW
+Applications in this directory may include:
+- End-user applications  
+- Developer tools  
+- Hybrid tools (GUI, CLI, and API-based)
 
-JuGloW is a modular ecosystem designed for building, distributing, and integrating applications and libraries in a structured and scalable way.
-> JuGloW adalah ekosistem modular yang dirancang untuk membangun, mendistribusikan, dan mengintegrasikan aplikasi dan perpustakaan secara terstruktur dan skalabel.
+> Aplikasi dalam direktori ini dapat berupa:
+> - Aplikasi pengguna akhir  
+> - Alat bantu pengembang  
+> - Alat hibrida (GUI, CLI, dan API)
 
-JURO acts as the entry point for both developers and automated systems.
-> JURO berfungsi sebagai titik masuk bagi baik pengembang maupun sistem otomatis.
+---
 
-## Repository Structure
-> Struktur Repositori
+## Application and Source Separation
+> Pemisahan Aplikasi dan Source Code
 
-- **[apps/](apps/)** → Distributable applications and packages  
-> - **apps/** → Aplikasi dan paket yang dapat didistribusikan
+Applications distributed under `apps/` are intentionally separated from their raw source implementations, which reside in the `source/` directory.
 
-- **[source/](source/)** → Source code and reusable modules 
-> - **source/** → Kode sumber dan modul yang dapat digunakan kembali
- 
-- **[docs/](docs/)** → Documentation and ecosystem references 
- > - **docs/** → Dokumentasi dan referensi ekosistem
+> Aplikasi yang didistribusikan di `apps/` dipisahkan secara sengaja dari implementasi kode mentahnya yang berada di direktori `source/`.
 
-## Access Model
-> Model Akses
+This separation enables:
+- Clean and stable distribution artifacts  
+- Independent source evolution  
+- Multiple build or packaging targets derived from the same source  
 
-JURO is designed to be accessible by:
-> JURO dirancang untuk dapat diakses oleh:
+> Pemisahan ini memungkinkan:
+> - Artefak distribusi yang bersih dan stabil  
+> - Evolusi source secara independen  
+> - Berbagai target build atau paket dari source yang sama
 
-- Human developers
-> - Pengembang manusia
+---
 
-- Automation tools
-> - Alat otomatisasi
+## Available Applications
+> Aplikasi yang Tersedia
 
-- AI-based systems
-> - Sistem berbasis AI
+### 🎨 Design
+**Application Directory:** [`apps/design/`](./design)
 
-Each component is structured for clear discovery, versioning, and reuse.
-> Setiap komponen dirancang untuk penemuan yang jelas, versi, dan penggunaan ulang.
+Visual and interface design tools within the JuGloW ecosystem.
 
-## Philosophy
-> Filsafat
+> Alat desain visual dan antarmuka dalam ekosistem JuGloW.
 
-JuGloW prioritizes:
-> JuGloW memprioritaskan:
+**Related Source:** [`source/design/`](../source/design)
 
-- Structural clarity
-> - Kejelasan struktural
+---
 
-- Ecosystem scalability
-> - Skalabilitas ekosistem
+### 💻 Coding Editor
+**Application Directory:** [`apps/coding-editor/`](./coding-editor)
 
-- Human and AI interoperability
-> - Interoperabilitas manusia dan AI
+Code editing tools optimized for structured, modular, and intent-based development.
 
+> Alat editor kode yang dioptimalkan untuk pengembangan terstruktur, modular, dan berbasis intent.
 
+**Related Source:** [`source/coding-editor/`](../source/coding-editor)
+
+---
+
+### 💬 ChatGlow
+**Application Directory:** [`apps/chatglow/`](./chatglow)
+
+AI-powered conversational interface integrated into JuGloW workflows.
+
+> Antarmuka percakapan berbasis AI yang terintegrasi dalam alur kerja JuGloW.
+
+**Related Source:** [`source/chatglow/`](../source/chatglow)
+
+---
+
+### 🖥️ Junhai Shell
+**Application Directory:** [`apps/junhai-shell/`](./junhai-shell)
+
+Shell and command-line environment designed for JuGloW-based systems.
+
+> Lingkungan shell dan command-line yang dirancang untuk sistem berbasis JuGloW.
+
+**Related Source:** [`source/junhai-shell/`](../source/junhai-shell)
+
+---
+
+### 🧠 Haicode
+**Application Directory:** [`apps/haicode/`](./haicode)
+
+Intent-oriented executable language tools and runtime environment.
+
+> Alat bahasa eksekusi berbasis intent beserta runtime environment Haicode.
+
+**Related Source:** [`source/haicode/`](../source/haicode)
+
+---
+
+## Application Directory Characteristics
+> Karakteristik Direktori Aplikasi
+
+Each application directory under `apps/` typically represents a distributable unit and may contain build outputs, assets, configuration, and metadata required for delivery.
+
+> Setiap direktori aplikasi di bawah `apps/` merepresentasikan satu unit distribusi dan dapat berisi hasil build, aset, konfigurasi, serta metadata yang dibutuhkan untuk distribusi.
+
+The internal structure of each application may vary depending on its purpose, platform, and delivery model.
+
+> Struktur internal setiap aplikasi dapat berbeda tergantung tujuan, platform, dan model distribusinya.
+
+---
+
+## Ecosystem Philosophy
+> Filosofi Ekosistem
+
+JuGloW applications are designed with an emphasis on:
+
+- Modular architecture  
+- Clear separation between source and distribution  
+- Long-term ecosystem scalability  
+- Interoperability between human users and AI systems  
+
+> Aplikasi JuGloW dirancang dengan penekanan pada:
+> - Arsitektur modular  
+> - Pemisahan yang jelas antara source dan distribusi  
+> - Skalabilitas ekosistem jangka panjang  
+> - Interoperabilitas antara manusia dan sistem AI
 
 
 
