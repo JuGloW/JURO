@@ -4,10 +4,10 @@
 ## Overview
 > Ringkasan
 
-JURO is the unified repository hub for the JuGloW ecosystem.  
-It serves as the central distribution and source organization for applications, libraries, and documentation within JuGloW.
-
+JURO is the unified repository hub for the JuGloW ecosystem.
 > JURO adalah pusat repositori terpadu untuk ekosistem JuGloW.
+
+It serves as the central distribution and source organization for applications, libraries, and documentation within JuGloW.
 > Ia berfungsi sebagai pusat distribusi dan organisasi sumber untuk aplikasi, perpustakaan, dan dokumentasi di dalam JuGloW.
 
 ## JuGloW Ecosystem
@@ -22,14 +22,14 @@ JURO acts as the entry point for both developers and automated systems.
 ## Repository Structure
 > Struktur Repositori
 
-- **apps/** → Distributable applications and packages  
+- **[apps/](apps/)** → Distributable applications and packages  
 > - **apps/** → Aplikasi dan paket yang dapat didistribusikan
 
-- **source/** → Source code and reusable modules 
+- **[source/](source/)** → Source code and reusable modules 
 > - **source/** → Kode sumber dan modul yang dapat digunakan kembali
  
-- **docs/** → Documentation and ecosystem references  
-> - **docs/** → Dokumentasi dan referensi ekosistem
+- **[docs/](docs/)** → Documentation and ecosystem references 
+ > - **docs/** → Dokumentasi dan referensi ekosistem
 
 ## Access Model
 > Model Akses
@@ -63,4 +63,10 @@ JuGloW prioritizes:
 
 - Human and AI interoperability
 > - Interoperabilitas manusia dan AI
+
+
+
+
+
+
 
