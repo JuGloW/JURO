@@ -1,378 +1,377 @@
-Memahami Konsep & Struktur OPCODE di Haicode
+# ***Understanding OPCODE Concepts & Structure in Haicode***
+-> **Memahami Konsep & Struktur OPCODE di Haicode**
 
-Bagian ini membahas OPCODE secara mendalam, yang merupakan komponen paling krusial dalam arsitektur Haicode – Intent-Oriented Executable Language.
+---
 
-Berbeda dengan bahasa pemrograman konvensional, OPCODE di Haicode bukanlah CPU instruction atau bytecode spesifik bahasa, melainkan sebuah:
+## ***Introduction***
 
-Universal Instruction Set
-yang bersifat semantic + operational
+**This section discusses OPCODE in depth, the most critical component of Haicode architecture.**  
+-> **Bagian ini membahas OPCODE secara mendalam, sebagai komponen paling krusial dalam arsitektur Haicode.**
 
-OPCODE menjadi titik temu antara makna (intent) dan eksekusi nyata (runtime / ABI / native / AI).
+**Haicode is an Intent-Oriented Executable Language.**  
+-> **Haicode adalah Intent-Oriented Executable Language.**
 
-Posisi OPCODE dalam Arsitektur Haicode
+**Unlike conventional programming languages, Haicode OPCODE is not a CPU instruction nor language-specific bytecode.**  
+-> **Berbeda dengan bahasa pemrograman konvensional, OPCODE di Haicode bukan instruksi CPU maupun bytecode spesifik bahasa.**
 
-Haicode memisahkan secara tegas antara:
+---
 
-Lapisan	Peran
-Intent (lowercase)	Apa yang dimaksud (makna semantik manusia / AI)
-Goal (Capitalized)	Tujuan eksekusi tingkat tinggi
-OPCODE (UPPERCASE)	Apa yang benar-benar dilakukan mesin
+## ***What is OPCODE in Haicode***
 
-🔹 Intent tidak pernah dieksekusi langsung
-🔹 Semua eksekusi harus melalui OPCODE
+**OPCODE is a Universal Instruction Set.**  
+-> **OPCODE adalah Universal Instruction Set.**
 
-Dengan model ini, Haicode memastikan bahwa:
+**It is semantic and operational at the same time.**  
+-> **OPCODE bersifat semantik sekaligus operasional.**
 
-Makna tidak hilang
+**OPCODE acts as the meeting point between meaning and real execution.**  
+-> **OPCODE menjadi titik temu antara makna dan eksekusi nyata.**
 
-Eksekusi tetap deterministik
+**Execution targets include runtime, ABI, native system, and AI engines.**  
+-> **Target eksekusi mencakup runtime, ABI, sistem native, dan mesin AI.**
 
-Semua target runtime berbagi instruksi yang sama
+---
 
-1️⃣ Konsep Dasar OPCODE
-OPCODE sebagai Universal Instruction Set
+# ***OPCODE Position in Haicode Architecture***
 
-OPCODE di Haicode dirancang sebagai set instruksi universal yang dapat dipetakan ke berbagai target eksekusi:
+**Haicode strictly separates the following layers:**  
+-> **Haicode memisahkan secara tegas lapisan-lapisan berikut:**
 
-C Opcode
-→ melalui hom.c / hom.h (C ABI)
+| Layer | Role |
+|------|------|
+| **Intent (lowercase)** | What is meant |
+| **Goal (Capitalized)** | High-level execution objective |
+| **OPCODE (UPPERCASE)** | What the machine actually executes |
 
-Python Opcode
-→ melalui ctypes, redef, atau runtime Python
+-> **Penjelasan per lapisan:**
 
-VM Opcode
-→ untuk virtual machine & AI execution
+- **Intent (lowercase)**  
+  -> **Apa yang dimaksud (makna semantik manusia / AI)**
 
-Native System Call
-→ file system, process, thread, OS syscall
+- **Goal (Capitalized)**  
+  -> **Tujuan eksekusi tingkat tinggi**
 
-AI / Tensor / Intent Execution
-→ inferensi model, multimodal processing, semantic resolution
+- **OPCODE (UPPERCASE)**  
+  -> **Apa yang benar-benar dilakukan mesin**
 
-Semua target ini memanggil OPCODE yang sama, hanya berbeda pada adapter.
+---
 
-Semantic + Operational
+### ***Execution Rules***
 
-Setiap OPCODE memiliki dua sifat utama:
+**Intent is never executed directly.**  
+-> **Intent tidak pernah dieksekusi langsung.**
 
-Makna Semantik
-→ OPCODE memahami apa yang ingin dilakukan
+**All execution must go through OPCODE.**  
+-> **Semua eksekusi harus melalui OPCODE.**
 
-Operasi Nyata
-→ OPCODE tahu bagaimana menjalankannya pada runtime
+---
 
-Inilah yang memungkinkan Haicode:
+### ***Why This Model Matters***
 
-Menghubungkan intent manusia/AI
+**Semantic meaning is never lost.**  
+-> **Makna semantik tidak pernah hilang.**
 
-Ke eksekusi mesin
+**Execution remains deterministic.**  
+-> **Eksekusi tetap deterministik.**
 
-Tanpa kehilangan konteks semantik
+**All runtimes share the same instruction set.**  
+-> **Semua target runtime berbagi instruksi yang sama.**
 
-Adapter Pattern (Prinsip Kunci)
+---
 
-Haicode menggunakan Adapter Pattern secara ketat.
+# ***1️⃣ Fundamental OPCODE Concept***
 
-Contoh:
+## ***OPCODE as Universal Instruction Set***
 
-PRINT
+**Haicode OPCODE is designed to be mapped to multiple execution targets.**  
+-> **OPCODE Haicode dirancang untuk dipetakan ke berbagai target eksekusi.**
 
+---
 
-Di C → printf
+### ***Supported Execution Targets***
 
-Di Python → print()
+**C Opcode execution via C ABI.**  
+-> **Eksekusi opcode C melalui C ABI.**
 
-Di VM → opcode internal
+→ **hom.c / hom.h**
 
-Di OS → syscall write
+---
 
-Di AI → output channel tensor/log
+**Python Opcode execution via Python runtime.**  
+-> **Eksekusi opcode Python melalui runtime Python.**
 
-➡️ OPCODE tetap sama, adapter yang berubah.
+→ **ctypes, redef, or Python runtime**
 
-Ini menjadikan HOM (Haicode Object Model) sebagai pengikat universal lintas bahasa dan runtime.
+---
 
-Intent vs OPCODE (Pemisahan Tegas)
-Elemen	Fungsi
-cetak	Intent (makna semantik)
-Cetak	Goal (arah eksekusi)
-PRINT	OPCODE (eksekusi nyata)
+**Virtual Machine Opcode for VM and AI execution.**  
+-> **Opcode Virtual Machine untuk eksekusi VM dan AI.**
 
-❌ Intent tidak dieksekusi
-✅ OPCODE selalu dieksekusi
+---
 
-2️⃣ Struktur Direktori OPCODE (Final)
+**Native System Calls for OS interaction.**  
+-> **System call native untuk interaksi OS.**
 
-Struktur OPCODE dirancang modular, scalable, dan runtime-ready.
-Hanya folder sets/ yang berisi definisi OPCODE nyata.
+→ **File system, process, thread, syscall**
 
-opcode/
-├─ __init__.py
-├─ opcode.py
-├─ opcode_base.py
-├─ opcode_types.py
-├─ opcode_registry.py
-├─ opcode_executor.py
-│
-├─ sets/
-│  ├─ __init__.py
-│  ├─ core.py
-│  ├─ arithmetic.py
-│  ├─ logic.py
-│  ├─ memory.py
-│  ├─ io.py
-│  ├─ filesystem.py
-│  ├─ process.py
-│  ├─ system.py
-│  ├─ function.py
-│  ├─ module.py
-│  ├─ ai.py
-│  └─ haicode.py
-│
-└─ mapping/
-   ├─ c_opcode_map.py
-   ├─ python_opcode_map.py
-   ├─ hai_opcode_map.py
-   └─ native_opcode_map.py
+---
 
-Penjelasan Komponen Inti
-opcode/init.py
+**AI / Tensor / Intent Execution.**  
+-> **Eksekusi AI / Tensor / Intent.**
 
-Inisialisasi package OPCODE
-→ memuat registry dan executor
+→ **Model inference, multimodal processing, semantic resolution**
 
-opcode/opcode.py
+---
 
-Master Opcode Registry
+**All targets call the same OPCODE.**  
+-> **Semua target memanggil OPCODE yang sama.**
 
-Daftar semua OPCODE global
+**Only the adapter differs.**  
+-> **Yang berbeda hanyalah adapter.**
 
-Metadata:
+---
 
-Nama opcode
+## ***Semantic + Operational Nature***
 
-Argumen
+**Each OPCODE has two core properties.**  
+-> **Setiap OPCODE memiliki dua sifat utama.**
 
-Target mapping
+---
 
-opcode/opcode_base.py
+### ***1. Semantic Meaning***
 
-Base Class OPCODE
+**OPCODE understands what is intended.**  
+-> **OPCODE memahami apa yang ingin dilakukan.**
 
-Struktur dasar setiap OPCODE
+---
 
-Method umum seperti:
+### ***2. Real Operation***
 
-execute()
+**OPCODE knows how to execute it on a runtime.**  
+-> **OPCODE tahu bagaimana menjalankannya pada runtime.**
 
-validasi argumen
+---
 
-binding adapter
+**This enables Haicode to connect human or AI intent to machine execution.**  
+-> **Hal ini memungkinkan Haicode menghubungkan intent manusia atau AI ke eksekusi mesin.**
 
-opcode/opcode_types.py
+**Without losing semantic context.**  
+-> **Tanpa kehilangan konteks semantik.**
 
-Klasifikasi OPCODE
+---
 
-Contoh:
+# ***Adapter Pattern (Key Principle)***
 
-ArithmeticType
+**Haicode strictly applies the Adapter Pattern.**  
+-> **Haicode menerapkan Adapter Pattern secara ketat.**
 
-IOType
+---
 
-SystemType
+### ***Example: PRINT***
 
-AITypes
+**In C → printf**  
+-> **Di C → printf**
 
-Digunakan untuk:
+**In Python → print()**  
+-> **Di Python → print()**
 
-validasi
+**In VM → internal opcode**  
+-> **Di VM → opcode internal**
 
-dispatch
+**In OS → write syscall**  
+-> **Di OS → syscall write**
 
-optimisasi runtime
+**In AI → tensor or log output channel**  
+-> **Di AI → channel output tensor atau log**
 
-opcode/opcode_registry.py
+---
 
-Pendaftaran & Lookup
+➡️ **OPCODE remains the same, adapters change.**  
+-> **OPCODE tetap sama, adapter yang berubah.**
 
-Contoh logika:
+**This makes HOM a universal binding layer.**  
+-> **Hal ini menjadikan HOM sebagai pengikat universal lintas bahasa dan runtime.**
 
-register("PRINT", PrintOpcode)
+---
 
-lookup("PRINT")
+# ***Intent vs OPCODE (Strict Separation)***
 
-Menjadi pusat kebenaran OPCODE.
+| Element | Function |
+|-------|---------|
+| **cetak** | Intent (semantic meaning) |
+| **Cetak** | Goal (execution direction) |
+| **PRINT** | OPCODE (real execution) |
 
-opcode/opcode_executor.py
+---
 
-Dispatcher Eksekusi
+❌ **Intent is never executed**  
+-> **Intent tidak pernah dieksekusi**
 
-Menentukan adapter
+✅ **OPCODE is always executed**  
+-> **OPCODE selalu dieksekusi**
 
-Menjalankan OPCODE
+---
 
-Menjembatani ke runtime target
+# ***2️⃣ Final OPCODE Directory Structure***
 
-OPCODE Sets (Eksekusi Nyata)
+**The OPCODE structure is modular, scalable, and runtime-ready.**  
+-> **Struktur OPCODE dirancang modular, scalable, dan siap runtime.**
 
-Semua OPCODE konkret didefinisikan di folder sets/.
+**Only the `sets/` folder contains real OPCODE definitions.**  
+-> **Hanya folder `sets/` yang berisi definisi OPCODE nyata.**
 
-core.py
+---
 
-OPCODE inti (fundamental, mirip C primitive)
+## ***Core Components Explanation***
 
-arithmetic.py
+### ***opcode/__init__.py***
 
-Operasi matematika:
+**Initializes the OPCODE package.**  
+-> **Menginisialisasi package OPCODE.**
 
-ADD
+**Loads registry and executor.**  
+-> **Memuat registry dan executor.**
 
-SUB
+---
 
-MUL
+### ***opcode/opcode.py***
 
-DIV
+**Master OPCODE registry.**  
+-> **Registry OPCODE utama.**
 
-logic.py
+**Contains global OPCODE definitions and metadata.**  
+-> **Berisi definisi OPCODE global dan metadata.**
 
-Logika:
+→ **Name, arguments, target mapping**
 
-IF
+---
 
-AND
+### ***opcode/opcode_base.py***
 
-OR
+**Base class for all OPCODE objects.**  
+-> **Base class untuk semua objek OPCODE.**
 
-NOT
+**Defines shared structure and behavior.**  
+-> **Mendefinisikan struktur dan perilaku bersama.**
 
-memory.py
+→ **execute(), argument validation, adapter binding**
 
-Manajemen memori:
+---
 
-ALLOC
+### ***opcode/opcode_types.py***
 
-FREE
+**OPCODE classification system.**  
+-> **Sistem klasifikasi OPCODE.**
 
-COPY
+**Used for validation, dispatch, and optimization.**  
+-> **Digunakan untuk validasi, dispatch, dan optimisasi.**
 
-io.py
+---
 
-Input / Output:
+### ***opcode/opcode_registry.py***
 
-PRINT
+**Central registration and lookup system.**  
+-> **Sistem pendaftaran dan lookup terpusat.**
 
-READ
+**Acts as the single source of truth.**  
+-> **Menjadi pusat kebenaran OPCODE.**
 
-WRITE
+---
 
-filesystem.py
+### ***opcode/opcode_executor.py***
 
-File & directory:
+**Execution dispatcher.**  
+-> **Dispatcher eksekusi.**
 
-open
+**Selects adapter and bridges to runtime.**  
+-> **Menentukan adapter dan menjembatani ke runtime.**
 
-close
+---
 
-read
+# ***OPCODE Sets (Real Execution Layer)***
 
-write
+**All concrete OPCODEs are defined inside `sets/`.**  
+-> **Semua OPCODE konkret didefinisikan di dalam `sets/`.**
 
-path ops
+---
 
-process.py
+### ***Sets Overview***
 
-Manajemen proses & thread:
+- **core.py**  
+  -> **OPCODE inti (fundamental, mirip primitive C)**
 
-spawn
+- **arithmetic.py**  
+  -> **Operasi matematika (ADD, SUB, MUL, DIV)**
 
-kill
+- **logic.py**  
+  -> **Logika (IF, AND, OR, NOT)**
 
-join
+- **memory.py**  
+  -> **Manajemen memori (ALLOC, FREE, COPY)**
 
-system.py
+- **io.py**  
+  -> **Input / Output (PRINT, READ, WRITE)**
 
-Interaksi OS:
+- **filesystem.py**  
+  -> **File & directory operations**
 
-environment
+- **process.py**  
+  -> **Process & thread management**
 
-command
+- **system.py**  
+  -> **OS interaction**
 
-OS info
+- **function.py**  
+  -> **Function calls (CALL, RETURN)**
 
-function.py
+- **module.py**  
+  -> **Module system (IMPORT, INCLUDE)**
 
-Fungsi:
+- **ai.py**  
+  -> **AI & multimodal (TENSOR, MODEL, INFER)**
 
-CALL
+- **haicode.py**  
+  -> **Haicode & JuGloW integration (REDEF, ACRUNS, SYMBOL)**
 
-RETURN
+---
 
-module.py
+# ***OPCODE Mapping (Adapter Layer)***
 
-Modularitas:
+**The `mapping/` folder maps OPCODE to real execution targets.**  
+-> **Folder `mapping/` memetakan OPCODE ke target eksekusi nyata.**
 
-IMPORT
+---
 
-INCLUDE
+- **c_opcode_map.py**  
+  -> **Mapping ke C ABI (PRINT → printf)**
 
-ai.py
+- **python_opcode_map.py**  
+  -> **Mapping ke Python runtime (PRINT → print())**
 
-Multimodal & AI:
+- **hai_opcode_map.py**  
+  -> **Mapping ke Intent / Goal (semantic binding)**
 
-TENSOR
+- **native_opcode_map.py**  
+  -> **Mapping ke OS syscall (FILE → open())**
 
-MODEL
+---
 
-INFER
+# ***OPCODE Design Conclusion***
 
-haicode.py
+**OPCODE is not a CPU instruction.**  
+-> **OPCODE bukan instruksi CPU.**
 
-Integrasi khusus Haicode & JuGloW:
+**OPCODE is a Semantic Universal Instruction.**  
+-> **OPCODE adalah instruksi universal yang bersifat semantik.**
 
-REDEF
+**All languages and runtimes call the same OPCODE.**  
+-> **Semua bahasa dan runtime memanggil OPCODE yang sama.**
 
-ACRUNS
+**Adapters determine how execution happens.**  
+-> **Adapter menentukan bagaimana eksekusi dilakukan.**
 
-SYMBOL
+**Intent and Goal semantics are preserved.**  
+-> **Semantik Intent dan Goal tetap terjaga.**
 
-OPCODE Mapping (Adapter Layer)
-
-Folder mapping/ bertanggung jawab melakukan mapping OPCODE ke target nyata.
-
-c_opcode_map.py
-
-Mapping ke C ABI
-
-Contoh: PRINT → printf
-
-python_opcode_map.py
-
-Mapping ke Python runtime
-
-Contoh: PRINT → print()
-
-hai_opcode_map.py
-
-Mapping ke Intent / Goal
-
-Digunakan untuk semantic binding
-
-native_opcode_map.py
-
-Mapping ke syscall OS
-
-Contoh: FILE → open()
-
-Kesimpulan Desain OPCODE Haicode
-
-OPCODE ≠ CPU instruction
-
-OPCODE = Semantic Universal Instruction
-
-Semua bahasa & runtime memanggil OPCODE yang sama
-
-Adapter menentukan bagaimana dieksekusi
-
-Intent & Goal tetap terjaga secara semantik
-
-Eksekusi tetap low-level & deterministic
+**Execution remains low-level and deterministic.**  
+-> **Eksekusi tetap low-level dan deterministik.**
