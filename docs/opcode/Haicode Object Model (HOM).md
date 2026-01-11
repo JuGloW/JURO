@@ -1,259 +1,314 @@
-Haicode — Intent-Oriented Executable Language
+# ***Haicode — Intent-Oriented Executable Language***
 
-Haicode adalah bahasa pemrograman berbasis Controlled Natural Language (CNL) yang intent-oriented, dirancang untuk menjembatani makna semantik manusia dengan eksekusi 
-nyata (opcode / ABI).
+-> **Bahasa Pemrograman Berorientasi Intent untuk Eksekusi Nyata**
 
-Bahasa ini mendukung Bahasa Indonesia dan Inggris, serta berfokus pada:
+---
 
-Intent → makna atau maksud alami
+## ***Overview***
 
-Goal → tujuan eksekusi tingkat tinggi
+**Haicode is an Intent-Oriented Executable Language based on Controlled Natural Language (CNL).**  
+-> **Haicode adalah bahasa pemrograman berbasis Controlled Natural Language (CNL) yang berorientasi intent.**
 
-Opcode → eksekusi nyata (runtime / ABI / native)
+**It is designed to bridge human semantic meaning with real execution (opcode / ABI).**  
+-> **Bahasa ini dirancang untuk menjembatani makna semantik manusia dengan eksekusi nyata (opcode / ABI).**
 
-Haicode dikembangkan untuk integrasi langsung dengan:
+**Haicode supports Indonesian and English as first-class languages.**  
+-> **Haicode mendukung Bahasa Indonesia dan Bahasa Inggris sebagai bahasa utama.**
 
-AI & multimodal processing
+---
 
-C ABI / native runtime
+## ***Core Focus***
 
-Library eksternal seperti redef, acruns, dan ekosistem JuGloW
+**Intent → natural meaning or human intention**  
+-> **Intent → makna alami atau maksud manusia**
 
-Dokumen ini menjelaskan evolusi grammar Haicode dari v0.1 hingga v0.4, termasuk:
+**Goal → high-level execution objective**  
+-> **Goal → tujuan eksekusi tingkat tinggi**
 
-Perubahan sintaksis
+**Opcode → real execution (runtime / ABI / native)**  
+-> **Opcode → eksekusi nyata (runtime / ABI / native)**
 
-Ekstensi fitur
+---
 
-Integrasi Haicode Object Model (HOM)
+## ***Ecosystem Integration***
 
-Ringkasan Konsep Inti
-1. Intent — Makna Semantik
+**Haicode is designed for direct integration with:**  
+-> **Haicode dirancang untuk integrasi langsung dengan:**
 
-Format: lowercase-word
+- **AI & multimodal processing**  
+  -> **Pemrosesan AI & multimodal**
+- **C ABI / native runtime**  
+  -> **C ABI / runtime native**
+- **External libraries such as redef, acruns, and JuGloW ecosystem**  
+  -> **Library eksternal seperti redef, acruns, dan ekosistem JuGloW**
 
-Intent merepresentasikan maksud alami atau konsep dasar, seperti kata kerja atau ide utama.
+---
 
-Tidak dieksekusi langsung
+## ***Document Purpose***
 
-Menjadi fondasi semantik bahasa
+**This document explains the evolution of Haicode grammar from v0.1 to v0.4.**  
+-> **Dokumen ini menjelaskan evolusi grammar Haicode dari versi v0.1 hingga v0.4.**
 
-Contoh:
+**Including:**  
+-> **Mencakup:**
 
-definisikan
-jalankan
-buat
+- **Syntax changes**  
+  -> **Perubahan sintaks**
+- **Feature extensions**  
+  -> **Ekstensi fitur**
+- **Haicode Object Model (HOM) integration**  
+  -> **Integrasi Haicode Object Model (HOM)**
 
-2. Goal — Tujuan Eksekusi
+---
 
-Format: CapitalizedWord
+# ***Core Concepts Summary***
 
-Goal merepresentasikan aksi atau tujuan tingkat tinggi yang mengarahkan alur eksekusi.
+---
 
-Mengikat intent ke struktur eksekusi
+## ***1️⃣ Intent — Semantic Meaning***
 
-Dapat dikombinasikan dengan role & scope
+**Format: lowercase-word**  
+-> **Format: kata-huruf-kecil**
 
-Contoh:
+**Intent represents natural meaning or conceptual intention.**  
+-> **Intent merepresentasikan makna alami atau maksud konseptual.**
 
-Definisikan
-Jalankan
-Jika
+**Intent is never executed directly.**  
+-> **Intent tidak pernah dieksekusi secara langsung.**
 
-3. Opcode — Eksekusi Nyata
+**It forms the semantic foundation of the language.**  
+-> **Intent menjadi fondasi semantik bahasa.**
 
-Format: UPPERCASE_WORD
+**Examples:**  
+-> **Contoh:**
 
-Opcode adalah instruksi runtime nyata yang dieksekusi oleh interpreter atau native runtime (ABI).
+- `definisikan`
+- `jalankan`
+- `buat`
 
-Langsung dieksekusi
+---
 
-Berinteraksi dengan data, memori, file, atau C ABI
+## ***2️⃣ Goal — Execution Objective***
 
-Contoh:
+**Format: CapitalizedWord**  
+-> **Format: KataDenganHurufAwalKapital**
 
-CETAK
-JUMLAH
-BUKA_FILE
+**Goal represents a high-level execution objective.**  
+-> **Goal merepresentasikan tujuan eksekusi tingkat tinggi.**
 
-Grammar & Standar Teknis
+**It binds intent to execution structure.**  
+-> **Goal mengikat intent ke struktur eksekusi.**
 
-Menggunakan EBNF Notation
+**Goals may combine with role and scope.**  
+-> **Goal dapat dikombinasikan dengan role dan scope.**
 
-Dirancang untuk kompatibilitas lintas bahasa
+**Examples:**  
+-> **Contoh:**
 
-Terintegrasi penuh dengan Haicode Object Model (HOM)
+- `Definisikan`
+- `Jalankan`
+- `Jika`
 
-HOM berfungsi sebagai pengikat universal untuk:
+---
 
-Python / C / native
+## ***3️⃣ Opcode — Real Execution***
 
-File I/O
+**Format: UPPERCASE_WORD**  
+-> **Format: HURUF_KAPITAL_SEMUA**
 
-Error handling
+**Opcode is a real runtime instruction executed by interpreter or native ABI.**  
+-> **Opcode adalah instruksi runtime nyata yang dieksekusi oleh interpreter atau ABI native.**
 
-Multimodal data (tensor untuk AI)
+**Opcode directly manipulates data, memory, file, or system.**  
+-> **Opcode berinteraksi langsung dengan data, memori, file, atau sistem.**
 
-Semua versi v0.1–v0.4 kompatibel, dengan v0.4 sebagai versi terbaru.
+**Examples:**  
+-> **Contoh:**
 
-Evolusi Grammar Haicode
-v0.1 — Foundational Semantic Grammar
+- `CETAK`
+- `JUMLAH`
+- `BUKA_FILE`
 
-Fokus utama:
-Dasar semantik Intent / Goal / Opcode
+---
 
-Struktur Program:
+# ***OPCODE Philosophy (Important)***
+
+**Opcode in Haicode is NOT a CPU instruction or language-specific bytecode.**  
+-> **Opcode dalam Haicode BUKAN instruksi CPU atau bytecode bahasa tertentu.**
+
+**Opcode is a Universal Semantic Instruction Set.**  
+-> **Opcode adalah Universal Semantic Instruction Set.**
+
+**All languages map to the same OPCODE set via adapters.**  
+-> **Semua bahasa memetakan ke OPCODE yang sama melalui adapter.**
+
+---
+
+## ***Intent vs Opcode***
+
+**Intent defines what is meant.**  
+-> **Intent mendefinisikan apa yang dimaksud.**
+
+**Opcode defines what is executed.**  
+-> **Opcode mendefinisikan apa yang dieksekusi.**
+
+**No execution may occur without an opcode.**  
+-> **Tidak ada eksekusi tanpa opcode.**
+
+---
+
+# ***Grammar & Technical Standards***
+
+**Haicode grammar uses EBNF notation.**  
+-> **Grammar Haicode menggunakan notasi EBNF.**
+
+**Designed for cross-language compatibility.**  
+-> **Dirancang untuk kompatibilitas lintas bahasa.**
+
+**Fully integrated with Haicode Object Model (HOM).**  
+-> **Terintegrasi penuh dengan Haicode Object Model (HOM).**
+
+---
+
+## ***Haicode Object Model (HOM)***
+
+**HOM acts as a universal binding layer.**  
+-> **HOM berfungsi sebagai lapisan pengikat universal.**
+
+**It connects:**  
+-> **Menghubungkan:**
+
+- Python / C / native  
+  -> **Python / C / native**
+- File I/O  
+  -> **File I/O**
+- Error handling  
+  -> **Penanganan error**
+- Multimodal data (tensor for AI)  
+  -> **Data multimodal (tensor untuk AI)**
+
+---
+
+# ***Grammar Evolution***
+
+---
+
+## ***v0.1 — Foundational Semantic Grammar***
+
+**Primary focus:**  
+-> **Fokus utama:**
+
+- Intent / Goal / Opcode separation  
+  -> **Pemisahan Intent / Goal / Opcode**
+
+**Program structure:**  
+-> **Struktur program:**
 
 PROGRAM → EXECUTION → STATEMENT → CLAUSE
 
 
-Aturan Utama:
-
-Intent → lowercase
-
-Goal → Capitalized
-
-Opcode → UPPERCASE
-
-Fitur Kunci:
-
-Entity system (known / unknown)
-
-Role (core, system, user, ai)
-
-Scope & path
-
-Conditional dasar
-
-Action (create, run, generate)
-
-Contoh:
-
-Definisikan "data" kedalam (path) [ai].
-Jalankan "Cetak" "Hello World"!.
-
-
-Keterbatasan:
-
-Belum ada fungsi, loop, atau ekspresi kompleks
-
-v0.2 — Structured Program & Expressions
-
-Upgrade Utama:
-
-Fungsi
-
-Kelas
-
-Loop
-
-Ekspresi matematika & logika
-
-Fitur Tambahan:
-
-Operator: + - * / > < == !=
-
-Function & class definition
-
-Loop: Ulangi, Selama, Untuk setiap
-
-Contoh:
-
-FUNGSI tambah(a:angka, b:angka):angka {
-  nilai hasil = a + b.
-  KEMBALIKAN hasil.
-}.
-PANGGIL tambah(2, 3).
-
-v0.3 — Runtime, File I/O & Libraries
-
-Upgrade Utama:
-
-Runtime opcode
-
-File I/O
-
-Error handling
-
-Standard library
-
-Integrasi redef & acruns
-
-Fitur Kunci:
-
-File I/O (BUKA_FILE, BACA_FILE, TULIS_FILE)
-
-Error handling (Coba, Tangkap, Akhirnya)
-
-Standard ops (JUMLAH, KALI, PENGGAL)
-
-Library import
-
-Contoh:
-
-IMPORT redef.
-BUKA_FILE "data.txt" sebagai file.
-BACA_FILE file ke konten.
-Cetak konten!.
-
-v0.4 — Full HOM & ABI Integration (Latest)
-
-Upgrade Utama:
-
-Integrasi penuh Haicode Object Model (HOM)
-
-ABI bridge ke C
-
-Module system
-
-Multimodal (tensor)
-
-Executable generation
-
-Fitur Baru:
-
-hom . IDENTIFIER → akses HOM
-
-abi . UPPERCASE_WORD → C ABI
-
-Module import/export
-
-Tensor processing untuk AI
-
-Metadata executable
-
-Contoh:
-
-MODULE AI {
-  IMPORT redef.
-  export tensor_ai.
-}.
-
-hom . "ai" . "proses_tensor"(data) [ai].
-
-Ringkasan Perbandingan Versi
-Versi	Fokus Utama
-v0.1	Dasar intent / goal / opcode
-v0.2	Fungsi, loop, ekspresi
-v0.3	Runtime, file I/O, library
-v0.4	HOM, ABI, modul, multimodal
-
-Catatan Penting:
-
-Semua sintaks lama tetap valid
-
-v0.4 adalah unified evolution, bukan breaking change
-
-Cakupan Total v0.4
-
-100+ aturan EBNF
-
-Semantic execution model
-
-Entity / role / scope system
-
-Runtime & native bridge
-
-AI & multimodal support
-
-Modular & extensible architecture
+**Core rules:**  
+-> **Aturan utama:**
+
+- Intent → lowercase  
+  -> **Intent → huruf kecil**
+- Goal → Capitalized  
+  -> **Goal → Kapital**
+- Opcode → UPPERCASE  
+  -> **Opcode → Kapital semua**
+
+**Limitations:**  
+-> **Keterbatasan:**
+
+- No functions  
+  -> **Belum ada fungsi**
+- No loops  
+  -> **Belum ada loop**
+- No complex expressions  
+  -> **Belum ada ekspresi kompleks**
+
+---
+
+## ***v0.2 — Structured Program & Expressions***
+
+**Major upgrades:**  
+-> **Upgrade utama:**
+
+- Functions & classes  
+  -> **Fungsi & kelas**
+- Loops  
+  -> **Loop**
+- Math & logic expressions  
+  -> **Ekspresi matematika & logika**
+
+---
+
+## ***v0.3 — Runtime, File I/O & Libraries***
+
+**Major upgrades:**  
+-> **Upgrade utama:**
+
+- Runtime opcode  
+  -> **Opcode runtime**
+- File I/O  
+  -> **File I/O**
+- Error handling  
+  -> **Penanganan error**
+- Standard library  
+  -> **Library standar**
+
+---
+
+## ***v0.4 — Full HOM & ABI Integration (Latest)***
+
+**Major upgrades:**  
+-> **Upgrade utama:**
+
+- Full HOM integration  
+  -> **Integrasi penuh HOM**
+- C ABI bridge  
+  -> **Jembatan ABI ke C**
+- Module system  
+  -> **Sistem modul**
+- Multimodal & tensor support  
+  -> **Dukungan multimodal & tensor**
+- Executable generation  
+  -> **Pembuatan executable**
+
+---
+
+# ***Version Comparison***
+
+| Version | Main Focus |
+|------|-----------|
+| v0.1 | Intent / Goal / Opcode foundation |
+| v0.2 | Functions, loops, expressions |
+| v0.3 | Runtime, file I/O, libraries |
+| v0.4 | HOM, ABI, modules, multimodal |
+
+---
+
+## ***Important Notes***
+
+**All previous syntax remains valid.**  
+-> **Semua sintaks lama tetap valid.**
+
+**v0.4 is a unified evolution, not a breaking change.**  
+-> **v0.4 adalah evolusi terpadu, bukan breaking change.**
+
+---
+
+# ***v0.4 Total Coverage***
+
+- **100+ EBNF rules**  
+  -> **100+ aturan EBNF**
+- **Semantic execution model**  
+  -> **Model eksekusi semantik**
+- **Entity / role / scope system**  
+  -> **Sistem entity / role / scope**
+- **Runtime & native bridge**  
+  -> **Jembatan runtime & native**
+- **AI & multimodal support**  
+  -> **Dukungan AI & multimodal**
+- **Modular & extensible architecture**  
+  -> **Arsitektur modular & dapat diperluas**
