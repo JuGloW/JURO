@@ -22,7 +22,7 @@ Berdasarkan tata bahasa Haicode:
 This follows semantic rules from controlled natural language programming, where intent drives goal, and goal triggers opcode.
 [pypi.org](https://pypi.org/project/intentlang/0.2.7/)
 > Ini mengikuti aturan semantik dari pemrograman bahasa alami yang terkontrol, di mana niat mengarahkan tujuan, dan tujuan memicu opcode.
-[pypi.org](https://pypi.org/project/intentlang/0.2.7/) 
+
  
 ## Structure 
 - **Purpose**: Store intent definitions, mappings, and documentation for intent-to-opcode resolution. 
@@ -57,7 +57,7 @@ Dari v0.1-v0.4:
 This structure enables universal instruction sets across languages, from intent to opcode.
 [stackoverflow.com](https://stackoverflow.com/questions/18762446/x86-jmp-opcode-structure)
 > Struktur ini memungkinkan set instruksi universal di seluruh bahasa, dari intent hingga opcode.
-[stackoverflow.com](https://stackoverflow.com/questions/18762446/x86-jmp-opcode-structure)
+
 
 ## Contributing 
 - Add intent files for new triggers. 
